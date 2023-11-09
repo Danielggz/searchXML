@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/Favicon/bike.ico">
+    <title>Vehicles Info</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div id="navBar">
+        <ul id="navBar">
+            <!-- Use of absolute paths assumes that localhost is going to be used -->
+            <li><a href="http://localhost/Assignment1/html/displayInfo.html">Home</a></li>
+            <li><a href="http://localhost/Assignment1/xml/products.xml">XML</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="container">
+            <div class="mainTitle">Welcome to the Vehicle Models Database!</div>
+            <div id="divSearch">
+                <input type="text" name="queryInput" id="queryInput" value="000-01"/>
+                <button id="btnCode"> Search a code </button>
+                <span id="message"></span>
+            </div>
+            <div id="infoProduct">
+                <div id="product">
+                    <img id="imgCategory" src="#"/>
+                    <div id="divCategory">
+                        <span class="title">Category</span>
+                        <span id="category"></span>
+                    </div>
+                    <div id="divName">
+                        <span class="title">Name</span>
+                        <span id="name"></span>
+                    </div>
+                    <div id="divDescription">
+                        <span class="title">Description</span>
+                        <span id="description"></span>
+                    </div>
+                    <div>
+                        <span class="title">Quantity</span>
+                        <span id="quantity"></span>
+                    </div>
+                    <div>
+                        <span class="title">Price per unit</span>
+                        <span id="unitPrice"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/displayXML.js"></script>
+</html>

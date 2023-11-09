@@ -1,0 +1,163 @@
+/* NavBar */
+#navBar{
+    /* Set navbar in front */
+    z-index: 1; 
+}
+#navBar ul {
+    /* Remove bullet points and style of default ul */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+    /* Set navbar to the top */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#navBar li {
+    float: left;
+}
+#navBar li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navBar li a:hover {
+    background-color: #111;
+}
+/* End NavBar */
+
+.container{
+    /* Set position higher */
+    position: relative;
+    width: 60%;
+    height: 90%;
+}
+
+/* Title of page */
+.mainTitle{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#message{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* input and button */
+#divSearch{
+    display:flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#divSearch input,button{
+    margin: auto;
+    width: 25%;
+    margin-top: 5px;
+}
+#queryInput {
+    font-size: 14px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid;
+    border-radius: 4px;
+  }
+#btnCode {
+    background-color: #4b85dc;
+    border: 1px solid #284b81;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor:pointer;
+  }
+#btnCode:hover {
+    background-color: #2b5a9f;
+    color: white;
+}
+/* End input and button */
+
+/* Product info for xml styles*/
+#infoProductXML{
+    margin-top: 60px;
+    width: 40%;
+    height: 80%;
+    border: 5px solid black;
+    border-radius: 10px;
+    background: #9fabe4;
+}
+
+/* Product info */
+#infoProduct{
+    margin: auto;
+    width: 65%;
+    height: 90%;
+    border: 5px solid grey;
+    border-radius: 50px;
+    background: #2F3D7E;
+    background: linear-gradient(to top, #FAEAEB 75%, #7682b9 25%, #FAEAEB 75%, #7682b9 25%);
+}
+#product{
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#product > div{
+    display:flex;
+    flex-direction: column;
+    margin: 15px;
+}
+#product span{
+    text-align: center;
+    margin-top:15px;
+}
+#product .title{
+    font-size:20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#imgCategory{
+    /* image for the category*/
+    float:right;
+    margin-top:-10px;
+    margin-right: 25px;
+}
+#divCategory{
+    font-size: 24px;
+    text-align: center;
+    height:25%;
+}
+/* End product info */
+
+.center {
+    /* Set element to the center of the screen */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+.hide{
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+}

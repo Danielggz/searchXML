@@ -1,0 +1,29 @@
+#navBar ul {
+    /* Remove bullet points and style of default ul */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+    /* Set navbar to the top */
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+#navBar li {
+    float: left;
+}
+
+#navBar li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+  }
+  
