@@ -1,7 +1,36 @@
+var xmlDoc = ""; //Global variable to store the XML text
 var infoProduct = document.getElementById("infoProduct");  
 document.addEventListener('DOMContentLoaded', function(){
     infoProduct.style.visibility = "hidden"; //Hide the info of the product on load
+
+    //Load XML from Ajax request
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../xml/products.xml');
+    xhr.timeout = 2000; // time in milliseconds
+    xhr.onload = function () {
+        // Request completed, it stores now the XML in the variable
+        xmlDoc = this.responseXML;
+    };
+    xhr.ontimeout = function (e) {
+        //The request exceeded the time limit so it is considered failed. Set error message
+        let message = "The request to xml has failed!";
+        document.getElementById("message").innerHTML = message;
+    };
+    xhr.send(null);
 });
+
+function getProductFromXML(productCode){
+    var evaluation = xmlDoc.evaluate( //XPath evaluation
+        "/products/product[@code='" + productCode + "']", 
+        xmlDoc,
+        null,
+        XPathResult.ANY_TYPE,
+        null,
+    );
+    return evaluation;
+}
+
+/* Previous method to get xml from plain string
 
 function getProductFromXML(productCode){
     //XML file
@@ -151,6 +180,8 @@ function getProductFromXML(productCode){
     </products>`;
     parser = new DOMParser();
     xmlDoc = parser.parseFromString(xmlText,"text/xml"); //Parse XML file
+
+    console.log(xmlDoc);
     var evaluation = xmlDoc.evaluate( //XPath evaluation
         "/products/product[@code='" + productCode + "']", 
         xmlDoc,
@@ -160,11 +191,13 @@ function getProductFromXML(productCode){
     );
     return evaluation;
 }
+*/
 
 var button = document.getElementById("btnCode"); 
 button.addEventListener("click", function(){ //Add click event for button
     var productCode = document.getElementById("queryInput").value; //Get value of the input (Code)
     var product = getProductFromXML(productCode); //Use the method to retrieve a product
+    console.log(product);
     try {
         let iterate = product.iterateNext(); 
         if(iterate != null)
