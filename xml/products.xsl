@@ -7,8 +7,8 @@
             <div id="navBar">
                 <ul id="navBar">
                     <!-- Use of absolute paths assumes that localhost is going to be used -->
-                    <li><a href="http://localhost/Assignment1/html/displayInfo.html">Home</a></li>
-                    <li><a href="http://localhost/Assignment1/xml/products.xml">Products</a></li>
+                    <li><a href="http://localhost/ModelsApp/html/displayInfo.html">Home</a></li>
+                    <li><a href="http://localhost/ModelsApp/xml/products.xml">Products</a></li>
                 </ul>
             </div>
             <xsl:for-each select="products/product">
